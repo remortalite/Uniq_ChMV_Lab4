@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:lab4.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="lab4.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="lab4" Width="450" Height="450"
+>
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Styles>
+			<Style Selector="Button">
+				<Setter Property="HorizontalAlignment" Value="Stretch" /> 
+				<Setter Property="VerticalAlignment" Value="Stretch" /> 
+				<Setter Property="HorizontalContentAlignment" Value="Center" /> 
+				<Setter Property="VerticalContentAlignment" Value="Center" /> 
+				<Setter Property="FontSize" Value="36" /> 
+			</Style>
+			<Style Selector="TextBlock">
+				<Setter Property="FontSize" Value="66" /> 
+				<Setter Property="HorizontalAlignment" Value="Center" /> 
+				<Setter Property="VerticalAlignment" Value="Center" /> 
+			</Style>
+	</Window.Styles>
+
+	<Grid ShowGridLines="False">
+	    <Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+	    </Grid.RowDefinitions>
+	    <Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+	    </Grid.ColumnDefinitions>
+
+		<Border Grid.ColumnSpan="4" BorderBrush="Gray" BorderThickness="2">
+			<TextBlock Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Result}" />
+		</Border>
+
+		<Button Grid.Row="1" Grid.Column="0" Click="OnButtonClick">I</Button>
+		<Button Grid.Row="1" Grid.Column="1" Click="OnButtonClick" >L</Button>
+		<Button Grid.Row="1" Grid.Column="2" Click="OnButtonClick" >M</Button>
+		<Button Grid.Row="1" Grid.Column="3" Click="OnButtonClick" >*</Button>
+
+		<Button Grid.Row="2" Grid.Column="0" Click="OnButtonClick" >V</Button>
+		<Button Grid.Row="2" Grid.Column="1" Click="OnButtonClick" >C</Button>
+		<Button Grid.Row="2" Grid.Column="2" Click="OnButtonClick" >+</Button>
+		<Button Grid.Row="2" Grid.Column="3" Click="OnButtonClick" >/</Button>
+
+		<Button Grid.Row="3" Grid.Column="0" Click="OnButtonClick" >X</Button>
+		<Button Grid.Row="3" Grid.Column="1" Click="OnButtonClick" >D</Button>
+		<Button Grid.Row="3" Grid.Column="2" Click="OnButtonClick" >-</Button>
+		<Button Grid.Row="3" Grid.Column="3" Click="OnButtonClick" >=</Button>
+	</Grid>
+
+</Window>
