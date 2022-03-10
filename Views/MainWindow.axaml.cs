@@ -9,12 +9,5 @@ namespace lab4.Views
         {
             InitializeComponent();
         }
-
-	public void OnButtonClick(object sender, RoutedEventArgs e)
-        {
-                Console.WriteLine("Clicked button " + (sender as Button)!.Content);
-        }
-
-
     }
 }

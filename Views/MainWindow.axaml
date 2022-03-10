@@ -20,6 +20,7 @@
 				<Setter Property="HorizontalContentAlignment" Value="Center" /> 
 				<Setter Property="VerticalContentAlignment" Value="Center" /> 
 				<Setter Property="FontSize" Value="36" /> 
+				<Setter Property="Command" Value="{Binding OnClickCommand}" /> 
 			</Style>
 			<Style Selector="TextBlock">
 				<Setter Property="FontSize" Value="66" /> 
@@ -43,23 +44,23 @@
 	    </Grid.ColumnDefinitions>
 
 		<Border Grid.ColumnSpan="4" BorderBrush="Gray" BorderThickness="2">
-			<TextBlock Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Result}" />
+			<TextBlock Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Greeting}" />
 		</Border>
 
-		<Button Grid.Row="1" Grid.Column="0" Click="OnButtonClick">I</Button>
-		<Button Grid.Row="1" Grid.Column="1" Click="OnButtonClick" >L</Button>
-		<Button Grid.Row="1" Grid.Column="2" Click="OnButtonClick" >M</Button>
-		<Button Grid.Row="1" Grid.Column="3" Click="OnButtonClick" >*</Button>
+		<Button Grid.Row="1" Grid.Column="0" CommandParameter="I">I</Button>
+		<Button Grid.Row="1" Grid.Column="1" CommandParameter="L" >L</Button>
+		<Button Grid.Row="1" Grid.Column="2" CommandParameter="M" >M</Button>
+		<Button Grid.Row="1" Grid.Column="3" CommandParameter="*" >*</Button>
 
-		<Button Grid.Row="2" Grid.Column="0" Click="OnButtonClick" >V</Button>
-		<Button Grid.Row="2" Grid.Column="1" Click="OnButtonClick" >C</Button>
-		<Button Grid.Row="2" Grid.Column="2" Click="OnButtonClick" >+</Button>
-		<Button Grid.Row="2" Grid.Column="3" Click="OnButtonClick" >/</Button>
+		<Button Grid.Row="2" Grid.Column="0"  CommandParameter="V" >V</Button>
+		<Button Grid.Row="2" Grid.Column="1"  CommandParameter="C" >C</Button>
+		<Button Grid.Row="2" Grid.Column="2"  CommandParameter="+" >+</Button>
+		<Button Grid.Row="2" Grid.Column="3"  CommandParameter="/" >/</Button>
 
-		<Button Grid.Row="3" Grid.Column="0" Click="OnButtonClick" >X</Button>
-		<Button Grid.Row="3" Grid.Column="1" Click="OnButtonClick" >D</Button>
-		<Button Grid.Row="3" Grid.Column="2" Click="OnButtonClick" >-</Button>
-		<Button Grid.Row="3" Grid.Column="3" Click="OnButtonClick" >=</Button>
+		<Button Grid.Row="3" Grid.Column="0"  CommandParameter="X" >X</Button>
+		<Button Grid.Row="3" Grid.Column="1"  CommandParameter="D" >D</Button>
+		<Button Grid.Row="3" Grid.Column="2"  CommandParameter="-" >-</Button>
+		<Button Grid.Row="3" Grid.Column="3"  CommandParameter="=" >=</Button>
 	</Grid>
 
 </Window>
